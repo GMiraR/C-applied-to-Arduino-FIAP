@@ -1,0 +1,45 @@
+#define greenLedP 4
+#define yellowLedP 3
+#define redLedP 2
+
+#define greenLedS 13
+#define yellowLedS 12
+#define redLedS 11
+
+void setup() {
+  pinMode(greenLedP, OUTPUT);
+  pinMode(yellowLedP, OUTPUT);
+  pinMode(redLedP, OUTPUT);
+  
+  pinMode(greenLedS, OUTPUT);
+  pinMode(yellowLedS, OUTPUT);
+  pinMode(redLedS, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(yellowLedP, LOW);
+  digitalWrite(redLedP, HIGH);
+  digitalWrite(greenLedP, LOW);
+
+
+  digitalWrite(redLedS, LOW);
+  digitalWrite(yellowLedS, LOW);
+  digitalWrite(greenLedS, HIGH);
+  delay(11000);
+
+  digitalWrite(greenLedS, LOW);
+  digitalWrite(yellowLedS, HIGH);
+  delay(4000);
+
+  digitalWrite(yellowLedS, LOW);
+  digitalWrite(redLedS, HIGH);
+
+  digitalWrite(redLedP, LOW);
+  digitalWrite(greenLedP, HIGH);
+  delay(20000);
+  
+  digitalWrite(greenLedP, LOW);
+  digitalWrite(yellowLedP, HIGH);
+
+  delay(4000);
+}
